@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+}
+
+body {
+  background-color: slategray ;
+}
+
+#number_guessing {
+  width: 38%;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex ;
+  justify-content: space-between;
+  align-self: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px;
+  margin-top: 2px;
+}
+
+h2 {
+  background-color: #fda521 ;
+  color: #ffffff;
+  font-size: 20px ;
+  margin: 0 10px 10px 10px;
+  font-weight: 400;
+  padding: 8px 0;
+}
+
+h4 , p{
+  color: #033043 ;
+  margin: 7px 6px;
+  font-size: bold;
+}
+
+#guess {
+  margin: 0px auto;
+  padding: 20px 10px ;
+  color: #033043;
+  text-align: center ;
+  font-size: 16px ;
+  font-family: Tahoma ;
+  font-weight: bold ;
+  border: 2px dashed #033043;
+  box-shadow: -5px 4px 6px;
+}
+
+#guess::placeholder {
+  color: #033043;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#guess:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 5px #3366cc;
+}
+
+#submit {
+  margin: 0px auto;
+  width: 40%;
+  text-align: center ;
+  padding: 8px 10px;
+  background-color: #fda521;
+  color: white ;
+  border: none;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#submit:hover {
+    background-color: #033043;
+    
+}
+
+#output {
+   background-color: white;
+   padding: 8px 2px;
+   color: #033043;
+   font-size: px ;
+}
