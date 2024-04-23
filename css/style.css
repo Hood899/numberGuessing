@@ -9,7 +9,7 @@ body {
 }
 
 #number_guessing {
-  width: 80%;
+  width: 38%;
   height: 300px;
   margin: 0 auto;
   text-align: center;
@@ -26,7 +26,7 @@ body {
 h2 {
   background-color: #fda521 ;
   color: #ffffff;
-  font-size: 20px ;
+  font-size: 1.5rem ;
   margin: 0 10px 10px 10px;
   font-weight: 400;
   padding: 8px 0;
@@ -35,15 +35,17 @@ h2 {
 h4 , p{
   color: #033043 ;
   margin: 7px 6px;
-  font-size: bold;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 #guess {
+  width: auto;
   margin: 0px auto;
   padding: 20px 10px ;
   color: #033043;
   text-align: center ;
-  font-size: 16px ;
+  font-size: 1rem ;
   font-family: Tahoma ;
   font-weight: bold ;
   border: 2px dashed #033043;
@@ -82,5 +84,24 @@ h4 , p{
    background-color: white;
    padding: 8px 2px;
    color: #033043;
-   font-size: px ;
+   font-size: 1rem ;
+}
+
+@media screen and (max-width: 600px) {
+  #number_guessing {
+    width: 90%;
+    height: auto;
+  }
+
+  h2 {
+    font-size: 1.2rem ;
+  }
+
+  h4, p {
+    font-size: 0.9rem;
+  }
+
+  #guess {
+    font-size: 0.9rem;
+  }
 }
