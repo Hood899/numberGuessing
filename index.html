@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>numberGuessing</title>
+    <title>Temperature Convert</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Supherhero">
     <meta name="keywords" content="programming hero,learn programming">
@@ -13,23 +13,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="number_guessing">
-   <h2>Number Guessing Game</h2>
-   <h4>Guess a number between 30 - 69</h4>
-   
-   <input type="number" id="guess" placeholder="Enter a number!">
-   
-   <button type="submit" id="submit">Submit</button>
-   
-   
-  
-   <p id="output"></p>
-   <h4 id="attempts"></h4>
- </div>
- 
 
 
+<form id="temperatureForm">
+  <h2>Temperature Converter</h2>
 
+  <label for="fromUnit">From</label> <br>
+  <select name="fromUnit" id="fromUnit">
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="celcius" selected>Celcius</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+  <br>
+
+  <label for="toUnit">To</label><br>
+  <select name="toUnit" id="toUnit">
+    <option value="kelvin" selected>Kelvin</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="celcius">Celcius</option>
+  </select>
+  <br>
+
+  <label for="temperature">Temperature</label> <br>
+  <input type="number" id="temperature" placeholder="Enter a temperature">
+  <br>
+
+  <button type="submit" id="submit">Convert</button>
+
+  <h3 id="textDisplay">Result: </h3>
+
+  <p id="result"></p>
+</form>
 
 <!--main js-->
 <script src="js/main.js"></script>

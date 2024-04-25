@@ -1,42 +1,37 @@
-// Add all your JS here
+let forme = document.getElementById('temperatureForm');
 
-let tryingValue = 0;
-let maximumAttempts = 9;
-const minimum = 30;
-const maximum = 69;
-const attempted = document.getElementById('attempts');
-let randomNumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-
-const numGuess = document.getElementById('guess');
-const submitBtn = document.getElementById('submit');
-const outputed = document.getElementById('output');
-
-submitBtn.addEventListener('click', function() {
-    const userValue = Number(numGuess.value);
-    tryingValue++;
-
-    switch(true) {
-        case tryingValue == maximumAttempts:
-            attempted.textContent = ` 😪You have reached the maximum number of attempts ${tryingValue}. Game over! 🥴Try again`;
-            submitBtn.disabled = true;
-            break;
-
-        case userValue < minimum || userValue > maximum:
-            attempted.textContent = `😇 Please enter a number between ${minimum} and ${maximum} 🙏🏽`;
-            break;
-
-        case userValue === randomNumber:
-            attempted.textContent = `You picked the right number, it is ${userValue}`;
-            outputed.textContent = `You guessed the number in ${tryingValue} tries! Congratulations 👏!`;
-            submitBtn.disabled = true;
-            break;
-
-        case userValue < randomNumber:
-            attempted.textContent = `The number you picked is too low!`;
-            break;
-
-        case userValue > randomNumber:
-            attempted.textContent = `The number you picked is too high!`;
-            break;
-    }
+forme.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  const fromUnit = document.getElementById('fromUnit').value;
+  const toUnit = document.getElementById('toUnit').value;
+  const temperature = parseInt(document.getElementById('temperature').value);
+  
+  const convertedTemperature = convertTemperature(temperature, fromUnit,  toUnit);
+  const resultElement = document.getElementById('result');
+  resultElement.textContent = `Resulta :  ${convertedTemperature.toFixed(2)} ${toUnit}`;
 });
+
+function convertTemperature(temperature, fromUnit,  toUnit) {
+  if (fromUnit === 'fahrenheit') {
+    if (toUnit === 'celcius') {
+      return (temperature - 32) * 5 / 9;
+    } else if (toUnit === 'kelvin') {
+      return (temperature - 32) * 5 / 9 + 273.5;
+    }
+  } else if (fromUnit === 'celcius') {
+    if (toUnit === 'fahrenheit') {
+      return (temperature * 9 / 5) + 32;
+    } else if (toUnit === 'kelvin') {
+      return (temperature + 273.5 );
+    }
+  } else if (fromUnit === 'kelvin') {
+    if (toUnit === 'fahrenheit') {
+      return (temperature - 273.5 ) * 9 / + 32;
+    } else if (toUnit === 'celcius') {
+       return (temperature + 273.5 );
+    }
+  }
+  
+  return NaN;
+}

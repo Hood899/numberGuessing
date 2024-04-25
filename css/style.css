@@ -5,103 +5,83 @@
 }
 
 body {
-  background-color: slategray ;
+  background: linear-gradient(to bottom right, #3498db, #e74c3c);
+  background-repeat: no-repeat;
+  height: 600px;
 }
 
-#number_guessing {
-  width: 38%;
-  height: 300px;
+#temperatureForm {
+  max-width: 400px;
   margin: 0 auto;
-  text-align: center;
-  display: flex ;
-  justify-content: space-between;
-  align-self: center;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 3px 3px 6px;
-  margin-top: 2px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: -5px 4px 6px;
+  border: none;
 }
 
 h2 {
-  background-color: #fda521 ;
-  color: #ffffff;
-  font-size: 1.5rem ;
-  margin: 0 10px 10px 10px;
-  font-weight: 400;
-  padding: 8px 0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-h4 , p{
-  color: #033043 ;
-  margin: 7px 6px;
-  font-size: 1rem;
+label {
+  font-size: 20px ;
   font-weight: bold;
+  color: black;
 }
 
-#guess {
-  width: auto;
-  margin: 0px auto;
-  padding: 20px 10px ;
-  color: #033043;
-  text-align: center ;
-  font-size: 1rem ;
-  font-family: Tahoma ;
-  font-weight: bold ;
-  border: 2px dashed #033043;
-  box-shadow: -5px 4px 6px;
+#fromUnit, #toUnit {
+  margin: 15px  0 15px 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px ;
+  color: #555;
+  background-color: white;
+  border-radius: 5px;
 }
 
-#guess::placeholder {
-  color: #033043;
-  font-style: italic;
-  font-weight: bold;
-}
-
-#guess:focus {
-  outline: none;
+input[type="number"] {
+  padding: 10px 16px;
+  margin-top: 15px;
+  width: 100%;
+  box-sizing: border-box;
   border: none;
-  box-shadow: 0 0 5px #3366cc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
 }
 
 #submit {
   margin: 0px auto;
-  width: 40%;
-  text-align: center ;
+  width: 100%;
+  text-align: center;
   padding: 8px 10px;
-  background-color: #fda521;
-  color: white ;
+  background-color: orangered ;
+  color: white;
   border: none;
-  transition: background-color 0.5s ease-in-out;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
 }
 
-#submit:hover {
-    background-color: #033043;
-    
+
+
+#textDisplay {
+  font-size: 16px ;
+  margin: 10px 0 10px 0;
+  color: black;
+  font-weight: bold ;
 }
 
-#output {
-   background-color: white;
-   padding: 8px 2px;
-   color: #033043;
-   font-size: 1rem ;
-}
-
-@media screen and (max-width: 600px) {
-  #number_guessing {
-    width: 90%;
-    height: auto;
-  }
-
-  h2 {
-    font-size: 1.2rem ;
-  }
-
-  h4, p {
-    font-size: 0.9rem;
-  }
-
-  #guess {
-    font-size: 0.9rem;
-  }
+#result {
+  margin-top: 22px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
 }
